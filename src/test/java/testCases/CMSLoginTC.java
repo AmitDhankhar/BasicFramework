@@ -1,10 +1,13 @@
 package testCases;
 
+import java.io.IOException;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pageObjects.CMSLogin;
+import reusableComponents.PropertiesOperations;
 import testBase.TestBase;
 
 
@@ -13,8 +16,8 @@ public class CMSLoginTC extends TestBase{
 	CMSLogin cmsLogin = new CMSLogin();
 	
 	@BeforeMethod
-	public void setUp() {
-		launchBrowser("chrome");
+	public void setUp() throws IOException {
+		launchBrowser(PropertiesOperations.getPropertyValue("browser"));
 	}
 	
 	

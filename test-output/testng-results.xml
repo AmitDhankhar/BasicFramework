@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-25T13:45:10 IST" name="Default suite" finished-at="2021-02-25T13:45:26 IST" duration-ms="16012">
+  <suite started-at="2021-02-25T18:21:44 IST" name="Default suite" finished-at="2021-02-25T18:21:51 IST" duration-ms="6567">
     <groups>
     </groups>
-    <test started-at="2021-02-25T13:45:10 IST" name="Default test" finished-at="2021-02-25T13:45:26 IST" duration-ms="16012">
+    <test started-at="2021-02-25T18:21:44 IST" name="Default test" finished-at="2021-02-25T18:21:51 IST" duration-ms="6567">
       <class name="testCases.CMSLoginTC">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.CMSLoginTC@3c7f66c4]" started-at="2021-02-25T13:45:10 IST" name="setUp" finished-at="2021-02-25T13:45:19 IST" duration-ms="8686" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.CMSLoginTC@3c7f66c4]" started-at="2021-02-25T18:21:44 IST" name="setUp" finished-at="2021-02-25T18:21:48 IST" duration-ms="4018" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="login()[pri:0, instance:testCases.CMSLoginTC@3c7f66c4]" started-at="2021-02-25T13:45:19 IST" name="login" finished-at="2021-02-25T13:45:19 IST" duration-ms="11" status="PASS">
+        <test-method signature="login()[pri:0, instance:testCases.CMSLoginTC@3c7f66c4]" started-at="2021-02-25T18:21:48 IST" name="login" finished-at="2021-02-25T18:21:48 IST" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.CMSLoginTC@3c7f66c4]" started-at="2021-02-25T13:45:19 IST" name="tearDown" finished-at="2021-02-25T13:45:19 IST" duration-ms="124" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.CMSLoginTC@3c7f66c4]" started-at="2021-02-25T18:21:48 IST" name="tearDown" finished-at="2021-02-25T18:21:49 IST" duration-ms="108" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.CMSLoginTC@3c7f66c4]" started-at="2021-02-25T13:45:19 IST" name="setUp" finished-at="2021-02-25T13:45:26 IST" duration-ms="7031" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.CMSLoginTC@3c7f66c4]" started-at="2021-02-25T18:21:49 IST" name="setUp" finished-at="2021-02-25T18:21:51 IST" duration-ms="2296" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="getCurrentUrl()[pri:1, instance:testCases.CMSLoginTC@3c7f66c4]" started-at="2021-02-25T13:45:26 IST" name="getCurrentUrl" finished-at="2021-02-25T13:45:26 IST" duration-ms="7" status="PASS">
+        <test-method signature="getCurrentUrl()[pri:1, instance:testCases.CMSLoginTC@3c7f66c4]" started-at="2021-02-25T18:21:51 IST" name="getCurrentUrl" finished-at="2021-02-25T18:21:51 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getCurrentUrl -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.CMSLoginTC@3c7f66c4]" started-at="2021-02-25T13:45:26 IST" name="tearDown" finished-at="2021-02-25T13:45:26 IST" duration-ms="112" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.CMSLoginTC@3c7f66c4]" started-at="2021-02-25T18:21:51 IST" name="tearDown" finished-at="2021-02-25T18:21:51 IST" duration-ms="87" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
