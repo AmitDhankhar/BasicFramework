@@ -10,7 +10,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class ExtentSetup {
 	
 	
-	public void setupExtentReport() {
+	public static ExtentReports setupExtentReport() {
 		SimpleDateFormat sdf =new SimpleDateFormat("dd-MM-yyyy HH-mm-ss");
 		Date date = new Date();
 		String currentDate = sdf.format(date);
@@ -20,9 +20,10 @@ public class ExtentSetup {
 		ExtentSparkReporter spark = new ExtentSparkReporter(path);
 		spark.config().setDocumentTitle("Doc Title");
 		spark.config().setTheme(Theme.DARK);
+		spark.config().setReportName("First report");
 		ExtentReports extent = new ExtentReports();
 		extent.attachReporter(spark);
-		
+		return extent;
 		
 	}
 	

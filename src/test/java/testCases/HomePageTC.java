@@ -1,19 +1,17 @@
 package testCases;
 
-import java.io.IOException;
-
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import pageObjects.CMSLogin;
+import org.testng.annotations.BeforeMethod;
+import java.io.IOException;
+import pageObjects.HomePage;
 import reusableComponents.PropertiesOperations;
 import testBase.TestBase;
 
 
-public class CMSLoginTC extends TestBase{
-	
-	CMSLogin cmsLogin = new CMSLogin();
+public class HomePageTC extends TestBase{
+	 
 	
 	@BeforeMethod
 	public void setUp() throws IOException {
@@ -22,17 +20,20 @@ public class CMSLoginTC extends TestBase{
 	
 	
 	@Test(priority = 0)
-	public void login() {
-		System.out.println("Page Title: "+driver.getTitle());
-		
-		/*
-		 * cmsLogin.enterUsername(); cmsLogin.enterPassword(); cmsLogin.clickSubmit();
-		 */
+	public void demoMenu() {
+		homePage = new HomePage();
+		homePage.clickClose();
+		homePage.clickForm();		
+		homePage.clicksimpleFormDemo();
+		homePage.typeenterMsgTextBox();
+		homePage.clicksenterMsgButton();
+		Assert.assertEquals(homePage.message(), "hello");
 	}
 	
-	@Test(priority = 1)
+	@Test(enabled = false)
 	public void getCurrentUrl() {
 		System.out.println("Page url: "+driver.getCurrentUrl());
+		Assert.assertEquals(1, 2);
 		
 		/*
 		 * cmsLogin.enterUsername(); cmsLogin.enterPassword(); cmsLogin.clickSubmit();
