@@ -1,6 +1,7 @@
 package testBase;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -20,6 +21,7 @@ public class TestBase extends ObjectRepo{
 			driver = new FirefoxDriver();
 		}
 		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get(PropertiesOperations.getPropertyValue("url"));
 	}
