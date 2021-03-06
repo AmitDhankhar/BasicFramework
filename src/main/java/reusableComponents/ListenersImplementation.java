@@ -26,6 +26,20 @@ public class ListenersImplementation extends ObjectRepo implements ITestListener
 
 	public void onTestSuccess(ITestResult result) {
 		test.log(Status.PASS, "Test Case "+ result.getMethod().getMethodName()+" is passed");
+		
+		File source = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		SimpleDateFormat sdf =new SimpleDateFormat("dd-MM-yyyy HH-mm-ss");
+		Date date = new Date();
+		String currentDate = sdf.format(date);
+		String path = System.getProperty("user.dir")+"/Reports/ScreenShots/Screenshot"+currentDate+".jpeg";
+		File destination = new File(path);
+		try {
+			FileUtils.copyFile(source, destination);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		test.addScreenCaptureFromPath(path, result.getMethod().getMethodName()+" is passed");
 	}
 
 	public void onTestFailure(ITestResult result) {

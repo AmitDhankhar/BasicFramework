@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.HashMap;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -50,8 +52,8 @@ public class HomePage extends TestBase {
 
 	}
 
-	public void typeenterMsgTextBox() {
-		enterMsgTextBox.sendKeys("hello");
+	public void typeenterMsgTextBox(HashMap<String,String> hm) {
+		enterMsgTextBox.sendKeys(hm.get("TC_Data"));
 	}
 	
 	public void clicksenterMsgButton() {
