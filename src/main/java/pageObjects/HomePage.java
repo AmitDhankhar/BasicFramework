@@ -26,6 +26,17 @@ public class HomePage extends TestBase {
 	@FindBy(id = "at-cv-lightbox-close")
 	WebElement closePopup;
 	
+	//
+	
+	@FindBy(xpath = "//div[@id='navbar-brand-centered']//a[contains(text(),'Progress Bars')]")
+	WebElement Progressbar;
+	
+	@FindBy(xpath = "//ul[@class='dropdown-menu']//a[contains(text(),'Bootstrap Progress bar')]")
+	WebElement BootstrapProgress;
+	
+	@FindBy(id = "cricle-btn")
+	WebElement clickDownloadbtn;
+	
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -54,4 +65,25 @@ public class HomePage extends TestBase {
 	public void clickClose() {
 		closePopup.click();
 	}
+	
+	public void clickProgressbar11() {
+		Progressbar.click();
+	}
+	
+	public void clickBootstrapProgress1() {
+		BootstrapProgress.click();
+	}
+	
+	public void clickclickDownloadbtn11() {
+		clickDownloadbtn.click();
+	}
+
+	public void clickclickDownloadbtn1() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
+	
 }

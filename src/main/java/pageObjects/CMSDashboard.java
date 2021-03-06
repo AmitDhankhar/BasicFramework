@@ -1,5 +1,6 @@
 package pageObjects;
 
-public class CMSDashboard {
+public class CMSDashboard  {
+	
 
 }

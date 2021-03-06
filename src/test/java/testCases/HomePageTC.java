@@ -27,7 +27,10 @@ public class HomePageTC extends TestBase{
 		homePage.clicksimpleFormDemo();
 		homePage.typeenterMsgTextBox();
 		homePage.clicksenterMsgButton();
-		Assert.assertEquals(homePage.message(), "hello");
+		homePage.clickProgressbar11();
+		homePage.clickBootstrapProgress1();
+		homePage.clickclickDownloadbtn11();
+	//	Assert.assertEquals(homePage.message(), "hello");
 	}
 	
 	@Test(enabled = false)
