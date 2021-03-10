@@ -5,6 +5,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import reusableComponents.PropertiesOperations;
@@ -21,7 +23,11 @@ public class TestBase extends ObjectRepo{
 			driver = new ChromeDriver(options);
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			DesiredCapabilities capabilities = new DesiredCapabilities();
+		    capabilities.setCapability("marionette", true);
+		    FirefoxOptions options = new FirefoxOptions();
+		    options.merge(capabilities);
+		    driver = new FirefoxDriver(options);
 		}
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
