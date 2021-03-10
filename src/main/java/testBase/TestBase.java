@@ -16,10 +16,12 @@ public class TestBase extends ObjectRepo{
 		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().clearDriverCache();
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--disable-features=VizDisplayCompositor");
+			driver = new ChromeDriver(options);
 		} else if (browser.equalsIgnoreCase("firefox")) {
-			//WebDriverManager.firefoxdriver().setup();
-			//driver = new FirefoxDriver();
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
 		}
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
