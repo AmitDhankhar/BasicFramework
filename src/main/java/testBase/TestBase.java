@@ -18,8 +18,8 @@ public class TestBase extends ObjectRepo{
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			//WebDriverManager.firefoxdriver().setup();
+			//driver = new FirefoxDriver();
 		}
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
