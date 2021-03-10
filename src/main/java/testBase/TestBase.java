@@ -14,7 +14,7 @@ public class TestBase extends ObjectRepo{
 	public void launchBrowser(String browser) throws IOException {
 
 		if (browser.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().clearCache();
+			WebDriverManager.chromedriver().clearDriverCache();
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
