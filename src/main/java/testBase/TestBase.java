@@ -16,11 +16,12 @@ public class TestBase extends ObjectRepo{
 	public void launchBrowser(String browser) throws IOException {
 
 		if (browser.equalsIgnoreCase("chrome")) {
-			WebDriverManager.chromedriver().clearDriverCache();
-			WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--disable-features=VizDisplayCompositor");
-			driver = new ChromeDriver(options);
+			//WebDriverManager.chromedriver().clearDriverCache();
+			//WebDriverManager.chromedriver().setup();
+			//ChromeOptions options = new ChromeOptions();
+			//options.addArguments("--disable-features=VizDisplayCompositor");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/chromedriver");
+			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			DesiredCapabilities capabilities = new DesiredCapabilities();
