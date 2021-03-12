@@ -31,7 +31,7 @@ public class TestBase extends ObjectRepo{
 		    driver = new FirefoxDriver(options);
 		}
 		
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get(PropertiesOperations.getPropertyValue("url"));
 	}
