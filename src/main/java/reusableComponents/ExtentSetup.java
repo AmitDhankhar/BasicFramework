@@ -11,7 +11,7 @@ public class ExtentSetup {
 	
 	
 	public static ExtentReports setupExtentReport() {
-		SimpleDateFormat sdf =new SimpleDateFormat("dd-MM-yyyy HH-mm-ss");
+		SimpleDateFormat sdf =new SimpleDateFormat("dd-MM-yyyy HH-mm");
 		Date date = new Date();
 		String currentDate = sdf.format(date);
 		
