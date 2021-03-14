@@ -31,6 +31,7 @@ public class ListenersImplementation extends ObjectRepo implements ITestListener
 		SimpleDateFormat sdf =new SimpleDateFormat("dd-MM-yyyy HH-mm-ss");
 		Date date = new Date();
 		String currentDate = sdf.format(date);
+		currentDate = System.getProperty("timeStamp") != null && !System.getProperty("timeStamp").trim().equalsIgnoreCase("") ? System.getProperty("timeStamp").trim().toLowerCase() :currentDate;
 		String path = System.getProperty("user.dir")+"/Reports/ScreenShots/Screenshot"+currentDate+".jpeg";
 		File destination = new File(path);
 		try {
