@@ -22,13 +22,7 @@ pipeline{
         stage("Test"){
             steps{
                 echo 'Testing'
-                sh "mvn test"
-            }
-        }
-        stage("Compile"){
-            steps{
-                echo 'Testing'
-                sh "mvn compile"
+                sh "mvn test -Dbrowser=${browser}"
             }
         }
         stage("Deploying"){
