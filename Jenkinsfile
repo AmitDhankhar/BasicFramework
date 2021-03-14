@@ -1,6 +1,8 @@
 pipeline{
     agent any
-    
+    environment{
+        PATH = /usr/local/Cellar/maven/3.6.1/bin:$PATH
+    }
     stages{
         stage ('Initialize') {
             steps {
