@@ -39,8 +39,8 @@ public class ListenersImplementation extends ObjectRepo implements ITestListener
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		test.addScreenCaptureFromPath(path, result.getMethod().getMethodName()+" is passed");
+		test.addScreenCaptureFromBase64String(path, result.getMethod().getMethodName()+" is passed");
+		//test.addScreenCaptureFromPath(path, result.getMethod().getMethodName()+" is passed");
 	}
 
 	public void onTestFailure(ITestResult result) {
@@ -59,8 +59,8 @@ public class ListenersImplementation extends ObjectRepo implements ITestListener
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		test.addScreenCaptureFromPath(path, result.getMethod().getMethodName()+" is failed");
+		test.addScreenCaptureFromBase64String(path, result.getMethod().getMethodName()+" is failed");
+		//test.addScreenCaptureFromPath(path, result.getMethod().getMethodName()+" is failed");
 	}
 
 	public void onTestSkipped(ITestResult result) {
