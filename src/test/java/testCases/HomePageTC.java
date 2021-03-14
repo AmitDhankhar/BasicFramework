@@ -22,7 +22,8 @@ public class HomePageTC extends TestBase{
 	
 	@BeforeMethod
 	public void setUp() throws IOException {
-		launchBrowser(PropertiesOperations.getPropertyValue("browser"));
+		String browser = System.getProperty("browser") != null && !System.getProperty("browser").trim().equalsIgnoreCase("") ? System.getProperty("browser").trim().toLowerCase() : PropertiesOperations.getPropertyValue("browser");
+		launchBrowser(browser);
 	}
 	
 	
