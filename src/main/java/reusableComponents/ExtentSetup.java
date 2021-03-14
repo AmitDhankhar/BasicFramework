@@ -15,7 +15,7 @@ public class ExtentSetup {
 		Date date = new Date();
 		String currentDate = sdf.format(date);
 		
-		String path = System.getProperty("user.dir")+"/Reports/ExecutionReport"+currentDate+".html";
+		String path = System.getProperty("user.dir")+"/Reports/"+currentDate+".html";
 		
 		ExtentSparkReporter spark = new ExtentSparkReporter(path);
 		spark.config().setDocumentTitle("Doc Title");
