@@ -23,11 +23,11 @@ public class TestBase extends ObjectRepo{
 			driver = new ChromeDriver(options);
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			DesiredCapabilities capabilities = new DesiredCapabilities();
-		    capabilities.setCapability("marionette", true);
-		    FirefoxOptions options = new FirefoxOptions();
-		    options.merge(capabilities);
-		    driver = new FirefoxDriver(options);
+			//DesiredCapabilities capabilities = new DesiredCapabilities();
+		    //capabilities.setCapability("marionette", true);
+		    //FirefoxOptions options = new FirefoxOptions();
+		    //options.merge(capabilities);
+		    driver = new FirefoxDriver();
 		}
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
