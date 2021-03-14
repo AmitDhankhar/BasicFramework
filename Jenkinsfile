@@ -22,7 +22,11 @@ pipeline{
         stage("Test"){
             steps{
                 echo 'Testing'
-                sh "mvn test -Dbrowser=${browser}"
+                sh "mvn test -Dbrowser=${browser} -DtimeStamp=${BUILD_TIMESTAMP}"
+                sh 'bundle install'
+                sh 'bundle exec rake build spec'
+                archive includes: 'pkg/*.gem'
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'Reports/${BUILD_TIMESTAMP}', reportFiles: '**/*.html', reportName: 'HTML Report', reportTitles: ''])
             }
         }
         stage("Deploying"){
