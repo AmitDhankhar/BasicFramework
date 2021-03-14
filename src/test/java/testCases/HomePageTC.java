@@ -30,7 +30,7 @@ public class HomePageTC extends TestBase{
 	public void demoMenu(Object obj) {
 		HashMap<String,String> hm = (HashMap<String, String>) obj;
 		homePage = new HomePage();
-		//homePage.clickClose();
+		homePage.clickClose();
 		homePage.clickForm();		
 		homePage.clicksimpleFormDemo();
 		homePage.typeenterMsgTextBox(hm);
